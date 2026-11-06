@@ -1,0 +1,21 @@
+name: My First CI Pipeline
+
+on:
+push: 
+branches: [main]
+
+jobs:
+test:
+runs-on: ubuntu-latest
+
+steps:
+- name: Checkout code
+  uses: actions/checkout@v4
+
+- name: Display message
+  run : echo "CI Pipeline is running!"
+
+- name: Check environment
+  run: |
+  echo "Code received"
+  echo "Build and test stage started"
